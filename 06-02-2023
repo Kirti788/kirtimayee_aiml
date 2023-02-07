@@ -1,0 +1,454 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Kirti788/kirtimayee_aiml/blob/main/06-02-2023\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "DxG3Ic75oQ4u"
+      },
+      "source": [
+        "A Company decided to give bonus of %5 to employee if his/her year of service is more than 5 years.ask user for their salary and year of service and print the net bonus amount"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "uuHrwKw6k6yp",
+        "outputId": "63c87df3-b17b-4194-b966-0196a1ecee18"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Enter your salary:2000\n",
+            "Enter Years of service:6\n",
+            "Yours salary(+Bonus) =  2100.0\n"
+          ]
+        }
+      ],
+      "source": [
+        "salary = eval(input(\"Enter your salary:\"))\n",
+        "\n",
+        "service_yrs = eval(input(\"Enter Years of service:\"))\n",
+        "\n",
+        "if service_yrs > 5:\n",
+        "\n",
+        "    print(\"Yours salary(+Bonus) = \",salary + (salary)*5/100)\n",
+        "\n",
+        "else:\n",
+        "\n",
+        "     print(\"You are not eligible for bonus as you have less service years\");"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "RnKNkLAlpBVB"
+      },
+      "source": [
+        "TAKE A VALUES OF LENGTH AND BREADTH OF A RECTRANGLE FROM USER AND CHECK IF IT IS A SQUARE OR NOT"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4QwBm4vdpZ95",
+        "outputId": "d693c7e9-6960-45da-b2f8-2ca7e67a23f2"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Enter length\n",
+            "7\n",
+            "Enter breadth\n",
+            "9\n",
+            "No,it is only rectrangle\n"
+          ]
+        }
+      ],
+      "source": [
+        "print (\"Enter length\");\n",
+        "length=input()\n",
+        "print (\"Enter breadth\");\n",
+        "breadth=input()\n",
+        "if length == breadth:\n",
+        "  print (\"Yes, it is a square\");\n",
+        "else:\n",
+        "  print (\"No,it is only rectrangle\");"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "XSPwgzo6sirb"
+      },
+      "source": [
+        "Take two int values from user and print greatest among them"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-dkALDUTsxiR",
+        "outputId": "9da3a0fe-2ed4-4e2e-e4da-5e5244dcd72d"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Enter the first number:8\n",
+            "Enter the second number:88\n",
+            "88 is greater\n"
+          ]
+        }
+      ],
+      "source": [
+        "a = int(input(\"Enter the first number:\"))\n",
+        "b = int(input(\"Enter the second number:\"))\n",
+        "if(a-b>0):\n",
+        "  print(a, \"is greater\")\n",
+        "else:\n",
+        "  print(b, \"is greater\")\n",
+        "  \n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "3yyMEgjHyDfE"
+      },
+      "source": [
+        "4. A shop will give discount of 10% if the cost of purchased quantity is more than 1000."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "background_save": true,
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "uBlqbSEIyKgK",
+        "outputId": "d3e7757a-8cb6-4364-905d-803229903a7a"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Enter quantity\n"
+          ]
+        }
+      ],
+      "source": [
+        "print(\"Enter quantity\");\n",
+        "quantity=input()\n",
+        "if quantity*100 > 1000:\n",
+        "  print(\"Cost is \",(quantity*100)-(.1*quantity*100));\n",
+        "else:\n",
+        "  print(\"Cost is\", quantity*100);\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "FVsoovI6yfRt"
+      },
+      "outputs": [],
+      "source": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "5. A school has following rules for grading system:\n",
+        "a. Below 25 - F\n",
+        "b. 25 to 45 - E\n",
+        "c. 45 to 50 - D\n",
+        "d. 50 to 60 - C\n",
+        "e. 60 to 80 - B\n",
+        "f. Above 80 - A\n",
+        "Ask user to enter marks and print the corresponding grade.\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "2zVL-7UXEGsI"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#using only if statement\n",
+        "marks=int(input('ENTER YOUR MARKS = '))\n",
+        "if(marks<25):\n",
+        "  print('your grade is F')\n",
+        "if(2580):\n",
+        "  print('your grade is A')\n",
+        "     "
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "mEvoPzGYFWkE",
+        "outputId": "c7168ac9-5a1a-4199-972a-9192f638d82e"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "ENTER YOUR MARKS = 90\n",
+            "your grade is A\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "6. Take input of age of 3 people by user and determine oldest and youngest among them."
+      ],
+      "metadata": {
+        "id": "3Z3ay5gpGNOa"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a=int(input('ENTER FIRST AGE:'))\n",
+        "b=int(input('ENTER SECOND AGE:'))\n",
+        "c=int(input('ENTER THIRD AGE:'))\n",
+        "if a>b and a>c:\n",
+        "  print('a is oldest')\n",
+        "elif b>a and b>c:\n",
+        "  print('b is oldest')\n",
+        "else:\n",
+        "  print('c is oldest')\n",
+        "if a<b and a<c:\n",
+        "  print('a is youngest') \n",
+        "elif b<a and b<c:\n",
+        "  print('b is youngest') \n",
+        "else:\n",
+        "  print('c is youngest')\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "11rMt1ilGTiH",
+        "outputId": "f43366db-2981-4854-ad64-c70d4caf416f"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "ENTER FIRST AGE:16\n",
+            "ENTER SECOND AGE:15\n",
+            "ENTER THIRD AGE:33\n",
+            "c is oldest\n",
+            "b is youngest\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "7. Write a program to print absolute vlaue of a number entered by user. E.g.-\n",
+        "INPUT: 1        OUTPUT: 1\n",
+        "INPUT: -1       OUTPUT: 1\n"
+      ],
+      "metadata": {
+        "id": "5C6pwp6UNRr-"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x=float(input())\n",
+        "x=abs(x)\n",
+        "if(x%1.0):\n",
+        "  print(x)\n",
+        "else:\n",
+        "  print(int(x))\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "f_Wr1eOaNbcs",
+        "outputId": "c5937afd-d858-4f39-a895-0abbe547ab3e"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2\n",
+            "2\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8. A student will not be allowed to sit in exam if his/her attendence is less than 75%.\n",
+        "Take following input from user\n",
+        "Number of classes held\n",
+        "Number of classes attended.\n",
+        "And print\n",
+        "percentage of class attended\n",
+        "Is student is allowed to sit in exam or not.\n"
+      ],
+      "metadata": {
+        "id": "vtpmu49EQN1c"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "k=int(input(\"Number of classes held\"))\n",
+        "h=int(input(\"Nmuber of c;lasses attend\"))\n",
+        "percentage=h/k*100\n",
+        "if percentage>=75:\n",
+        "  print(\"STUDENT IS ALLOWED TO SIT IN THE EXAM HALL\")\n",
+        "else:\n",
+        "  print(\"STUDENT IS NOT ALLOWED TO SIT IN THE EXAM HALL\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "p20dUtGjQXbS",
+        "outputId": "9493b7a1-3b18-4a9f-d2ab-391190dd86bd"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Number of classes held90\n",
+            "Nmuber of c;lasses attend75\n",
+            "STUDENT IS ALLOWED TO SIT IN THE EXAM HALL\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "z3mWPi4dRBui"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "9. Traffic light:\n",
+        "Write a python program that will check for the following conditions:\n",
+        "If the light is green – Car is allowed to go\n",
+        "If the light is yellow – Car has to wait\n",
+        "If the light is red – Car has to stop\n"
+      ],
+      "metadata": {
+        "id": "83zYwidZRP2D"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "light=str(input('THE COLOR OF THE TRAFFIC LIGHT IS : '))\n",
+        "if(light=='green'):\n",
+        "  print('CAR IS ALLOWED TO GO !')\n",
+        "elif(light=='yellow'):\n",
+        "  print('CAR HAS TO WAIT !')\n",
+        "else:\n",
+        "  print('CAR HAS TO STOP !')\n",
+        "     "
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ClMJLqvTRWkX",
+        "outputId": "8921f26f-9f62-4721-b394-61ac362fd0a7"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "THE COLOR OF THE TRAFFIC LIGHT IS : GREEN\n",
+            "CAR HAS TO STOP !\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n"
+      ],
+      "metadata": {
+        "id": "HbUyeQFhUjyt"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOJKf0uGJb2NX0XQsUqHsPU",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
