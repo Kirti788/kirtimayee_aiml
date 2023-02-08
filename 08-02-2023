@@ -1,0 +1,1629 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNfj7KZwnPum/ypPZnVGUWI",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Kirti788/kirtimayee_aiml/blob/main/08-02-2023\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "4ZbkfvylZqZy"
+      },
+      "outputs": [],
+      "source": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "1.\tWrite a program to reverse an integer in Python."
+      ],
+      "metadata": {
+        "id": "o6KbdGQjaA7Z"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#using if ,else,elif ,while statement\n",
+        "num = 1234\n",
+        "reversed_num = 0\n",
+        "\n",
+        "while num != 0:\n",
+        "    digit = num % 10\n",
+        "    reversed_num = reversed_num * 10 + digit\n",
+        "    num //= 10\n",
+        "\n",
+        "print(\"Reversed Number: \" + str(reversed_num))\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "UalaM9NtaEbB",
+        "outputId": "db7d616c-808b-4620-b991-ecfc3fb3ff20"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Reversed Number: 4321\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "2.\tWrite a program in Python to check whether an integer is Armstrong number or not."
+      ],
+      "metadata": {
+        "id": "rdajGHLYcQEJ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Python program to check if the number is an Armstrong number or not\n",
+        "num = int(input(\"Enter a number: \"))\n",
+        "sum = 0\n",
+        "temp = num\n",
+        "while temp > 0:\n",
+        "   digit = temp % 10\n",
+        "   sum += digit ** 3\n",
+        "   temp //= 10\n",
+        "if num == sum:\n",
+        "   print(num,\"is an Armstrong number\")\n",
+        "else:\n",
+        "   print(num,\"is not an Armstrong number\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "P6-SFuWlcdOh",
+        "outputId": "34cf145b-2156-4a97-a40d-d53c6587fb2d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 54\n",
+            "54 is not an Armstrong number\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "3.\tWrite a program in Python to check given number is prime or not."
+      ],
+      "metadata": {
+        "id": "Ky6x7jb0eKW8"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        " n = 5\n",
+        "if n > 1:\n",
+        "\tfor i in range(2, int(n/2)+1):\n",
+        "\t\tif (n % i) == 0:\n",
+        "\t\t\tprint(num, \"is not a prime number\")\n",
+        "\t\tbreak\n",
+        "\telse:\n",
+        "\t\tprint(n, \"is a prime number\")\n",
+        "else:\n",
+        "\tprint(n, \"is not a prime number\")"
+      ],
+      "metadata": {
+        "id": "E5csj_0Fe1i-"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "4.\tWrite a program in Python to print the Fibonacci series using iterative method."
+      ],
+      "metadata": {
+        "id": "5zuk8kTSe5dN"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "f=int(input('enter the first number = '))\n",
+        "s=int(input('enter the second number = '))\n",
+        "n=int(input('enter the number of sequence for the fibonacci series = '))\n",
+        "print('the fibonacci series = ')\n",
+        "print(f)\n",
+        "print(s)\n",
+        "for i in range(f,n):\n",
+        "  if(i<=1):\n",
+        "    result=i\n",
+        "  else:\n",
+        "    result=f+s\n",
+        "    f=s\n",
+        "    s=result\n",
+        "  print(result)\n",
+        "     \n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nOGh-nvDfFbC",
+        "outputId": "1ebab13a-f838-46e0-9735-e88dd4f2293a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the first number = 6\n",
+            "enter the second number = 8\n",
+            "enter the number of sequence for the fibonacci series = 89\n",
+            "the fibonacci series = \n",
+            "6\n",
+            "8\n",
+            "14\n",
+            "22\n",
+            "36\n",
+            "58\n",
+            "94\n",
+            "152\n",
+            "246\n",
+            "398\n",
+            "644\n",
+            "1042\n",
+            "1686\n",
+            "2728\n",
+            "4414\n",
+            "7142\n",
+            "11556\n",
+            "18698\n",
+            "30254\n",
+            "48952\n",
+            "79206\n",
+            "128158\n",
+            "207364\n",
+            "335522\n",
+            "542886\n",
+            "878408\n",
+            "1421294\n",
+            "2299702\n",
+            "3720996\n",
+            "6020698\n",
+            "9741694\n",
+            "15762392\n",
+            "25504086\n",
+            "41266478\n",
+            "66770564\n",
+            "108037042\n",
+            "174807606\n",
+            "282844648\n",
+            "457652254\n",
+            "740496902\n",
+            "1198149156\n",
+            "1938646058\n",
+            "3136795214\n",
+            "5075441272\n",
+            "8212236486\n",
+            "13287677758\n",
+            "21499914244\n",
+            "34787592002\n",
+            "56287506246\n",
+            "91075098248\n",
+            "147362604494\n",
+            "238437702742\n",
+            "385800307236\n",
+            "624238009978\n",
+            "1010038317214\n",
+            "1634276327192\n",
+            "2644314644406\n",
+            "4278590971598\n",
+            "6922905616004\n",
+            "11201496587602\n",
+            "18124402203606\n",
+            "29325898791208\n",
+            "47450300994814\n",
+            "76776199786022\n",
+            "124226500780836\n",
+            "201002700566858\n",
+            "325229201347694\n",
+            "526231901914552\n",
+            "851461103262246\n",
+            "1377693005176798\n",
+            "2229154108439044\n",
+            "3606847113615842\n",
+            "5836001222054886\n",
+            "9442848335670728\n",
+            "15278849557725614\n",
+            "24721697893396342\n",
+            "40000547451121956\n",
+            "64722245344518298\n",
+            "104722792795640254\n",
+            "169445038140158552\n",
+            "274167830935798806\n",
+            "443612869075957358\n",
+            "717780700011756164\n",
+            "1161393569087713522\n",
+            "1879174269099469686\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "6.\tWrite a program in Python to check whether a number is palindrome or not using reverse method."
+      ],
+      "metadata": {
+        "id": "FNGtauqDhX0s"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n = int(input(\"please give a number : \"))\n",
+        "reverse= 0\n",
+        "temp=n\n",
+        "while (temp!=0):\n",
+        "    reverse = reverse*10 + temp%10;        \n",
+        "    temp=temp//10;\n",
+        "if (reverse==n):\n",
+        "    print(\"number is palindrom\")\n",
+        "else:\n",
+        "    print(\"number is not palindrom\")\n",
+        "     "
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "HtHM4Jhf5Vrr",
+        "outputId": "eec04ba5-bd69-49a5-dbd2-c4a6759a8490"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "please give a number : 7\n",
+            "number is palindrom\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.\tWrite a program in Python to find greatest among three integers."
+      ],
+      "metadata": {
+        "id": "e3hBZgyT6O9a"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = int(input('Enter first number  : '))\n",
+        "b = int(input('Enter second number : '))\n",
+        "c = int(input('Enter third number  : '))\n",
+        "\n",
+        "largest = 0\n",
+        "\n",
+        "if (a > b and a > c) :\n",
+        "    largest = a\n",
+        "elif (b > c) :\n",
+        "    largest = b\n",
+        "else :\n",
+        "    largest = c\n",
+        "\n",
+        "print(largest, \"is the largest of three no.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "VB18s1DT7KQl",
+        "outputId": "15500d10-7103-487d-8037-2ba6ebfe62aa"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter first number  : 78\n",
+            "Enter second number : 98\n",
+            "Enter third number  : 90\n",
+            "98 is the largest of three no.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "9.\tWrite a program in Python to check if a number is binary"
+      ],
+      "metadata": {
+        "id": "tY4CT4kh7por"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num = int(input(\"please give a number : \"))\n",
+        "j=num%10\n",
+        "num=num//10\n",
+        "if j!=0 and j!=1:\n",
+        "    print(\"num is not binary\")\n",
+        "elif num==0:\n",
+        "   print(\"num is binary\") \n",
+        "     "
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-ZZMIGrN7xwh",
+        "outputId": "425b0ab2-edd7-4ed9-e355-275e4e262d0b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "please give a number : 0\n",
+            "num is binary\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "10.\tWrite a program in Python to find sum of digits of a number using recursion?"
+      ],
+      "metadata": {
+        "id": "fEOo-RHr8DFY"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def sum_of_digit( n ):\n",
+        "    if (n == 0):\n",
+        "        return 0\n",
+        "    return (n % 10 + sum_of_digit(int(n / 10)))\n",
+        "num=int(input('enter the number'))\n",
+        "result = sum_of_digit(num)\n",
+        "print(\"Sum of digits in\",num,\"is\", result)\n",
+        "     "
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "kGVs76oU8QBG",
+        "outputId": "6e8a6778-f7fe-4ea5-c02d-a72eacedccaf"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the number88\n",
+            "Sum of digits in 88 is 16\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "11.\tWrite a program in Python to swap two numbers without using third variable"
+      ],
+      "metadata": {
+        "id": "cE6rG8WN8ezJ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Python code to swap two numbers\n",
+        "# without using another variable\n",
+        "\n",
+        "\n",
+        "x =int(input('enter the value of x ='))\n",
+        "y =int(input('enter the value of y ='))\n",
+        "\n",
+        "print (\"Before swapping: \")\n",
+        "print(\"Value of x : \", x, \" and y : \", y)\n",
+        "\n",
+        "# code to swap 'x' and 'y'\n",
+        "x, y = y, x\n",
+        "\n",
+        "print (\"After swapping: \")\n",
+        "print(\"Value of x : \", x, \" and y : \", y)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "sjNEJbF38p-v",
+        "outputId": "a5c91bc5-d958-40e4-c135-7924a7e5bb9c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the value of x =99\n",
+            "enter the value of y =80\n",
+            "Before swapping: \n",
+            "Value of x :  99  and y :  80\n",
+            "After swapping: \n",
+            "Value of x :  80  and y :  99\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "CCJRe4xd83bN"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "12.\tWrite a program in Python to swap two numbers using third variable?"
+      ],
+      "metadata": {
+        "id": "h5abWhjEMFFO"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x =int(input('enter the value of x before swapping = '))\n",
+        "y =int(input('enter the value of y before swapping = '))\n",
+        "if(x<0) and (y<0):\n",
+        "   print('enter a value not equal to 0')\n",
+        "else:\n",
+        "  temp = x\n",
+        "  x = y\n",
+        "  y = temp\n",
+        "  print('The value of x after swapping:',x)\n",
+        "  print('The value of y after swapping:',y)\n",
+        "     "
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "zXVsZED2Mah9",
+        "outputId": "d4354288-2ed3-4a64-add2-45a2cb13c9aa"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the value of x before swapping = 90\n",
+            "enter the value of y before swapping = 09\n",
+            "The value of x after swapping: 9\n",
+            "The value of y after swapping: 90\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "13.\tWrite a program in Python to find prime factors of a given integer."
+      ],
+      "metadata": {
+        "id": "BG4DCNJcNMt2"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n = int(input(\"Enter any Number for calculating the prime factors: \"))\n",
+        "i = 1\n",
+        "\n",
+        "while(i <= n):\n",
+        "    c = 0\n",
+        "    if(n % i == 0):\n",
+        "        j = 1\n",
+        "        while(j <= i):\n",
+        "            if(i % j == 0):\n",
+        "                c = c + 1\n",
+        "            j = j + 1\n",
+        "            \n",
+        "        if (c == 2):\n",
+        "            print('prime factors are : ',i)\n",
+        "    i = i + 1"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ZM73Tg7rNXui",
+        "outputId": "39b578ea-2b85-4cb6-c0bc-13aedb89f130"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter any Number for calculating the prime factors: 8\n",
+            "prime factors are :  2\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "14.\tWrite a program in Python to add two integer without using arithmetic operator?"
+      ],
+      "metadata": {
+        "id": "rytC5fm5NqZf"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x =int(input('enter the first value= '))\n",
+        "y =int(input('enter the second value = '))\n",
+        "def Add(x, y):\n",
+        "   \n",
+        "    if (y == 0):\n",
+        "        return x\n",
+        "    else:\n",
+        "        return Add( x ^ y, (x & y) << 1)\n",
+        "print('the sum is',Add(x,y))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "druTSsKaN5pL",
+        "outputId": "e13a8047-4712-4397-ee59-6bb77511c191"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the first value= 5\n",
+            "enter the second value = 6\n",
+            "the sum is 11\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "15.\tWrite a program in Python to find given number is perfect or not?"
+      ],
+      "metadata": {
+        "id": "Gne517kVOM3x"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n = int(input(\"Enter any number: \"))\n",
+        "sum1 = 0\n",
+        "for i in range(1, n):\n",
+        "    if(n % i == 0):\n",
+        "        sum1 = sum1 + i\n",
+        "if (sum1 == n):\n",
+        "    print(\"The number is a Perfect number!\")\n",
+        "else:\n",
+        "    print(\"The number is not a Perfect number!\")\n",
+        "     "
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "qM6GhMhfOlV9",
+        "outputId": "0c0ac1b7-ff66-48e0-bf34-ba461ee26a6b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter any number: 89\n",
+            "The number is not a Perfect number!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "16.\tPython Program to find the Average of numbers with explanations."
+      ],
+      "metadata": {
+        "id": "lyoIHqavO2D9"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num = int(input('How many numbers: '))\n",
+        "total_sum = 0\n",
+        "for n in range(num):\n",
+        "    numbers = float(input('Enter number : '))\n",
+        "    total_sum += numbers\n",
+        "avg = total_sum/num\n",
+        "print('Average of ', num, ' numbers is :', avg)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "o3LxgCIFPDFl",
+        "outputId": "60f5ba70-5f71-4b56-94d0-3a58a31d6e8a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "How many numbers: 8\n",
+            "Enter number : 4\n",
+            "Enter number : 5\n",
+            "Enter number : 5\n",
+            "Enter number : 4\n",
+            "Enter number : 3\n",
+            "Enter number : 2\n",
+            "Enter number : 2\n",
+            "Enter number : 5\n",
+            "Average of  8  numbers is : 3.75\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "17.\tPython Program to calculate factorial using iterative method."
+      ],
+      "metadata": {
+        "id": "CxQ-QZMNPqRz"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num=int(input(\"Enter the whole number to find the factorial: \"))\n",
+        "factorial = 1\n",
+        "if num < 0:\n",
+        "   \tprint(\"Factorial can't be calculated for negative number\")\n",
+        "elif num == 0:\n",
+        "   print(\"Factorial of 0 is 1\")\n",
+        "else:\n",
+        "  for i in range(1,num + 1):\n",
+        "   factorial = factorial*i\n",
+        "print(\"Factorial of\",num,\"is\",factorial)\n",
+        "     "
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nHZh3lEoP1TY",
+        "outputId": "710a2443-d050-42e5-80f9-6552cebc125d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter the whole number to find the factorial: 88\n",
+            "Factorial of 88 is 185482642257398439114796845645546284380220968949399346684421580986889562184028199319100141244804501828416633516851200000000000000000000\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "18.\tPython Program to calculate factorial using recursion"
+      ],
+      "metadata": {
+        "id": "xum8tugQQKER"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def recur_factorial(n):\n",
+        "   if n == 1:\n",
+        "       return n\n",
+        "   else:\n",
+        "       return n*recur_factorial(n-1)\n",
+        "\n",
+        "num=int(input('enter the number = '))\n",
+        "\n",
+        "# check if the number is negative\n",
+        "if num < 0:\n",
+        "   print(\"Sorry, factorial does not exist for negative numbers\")\n",
+        "elif num == 0:\n",
+        "   print(\"The factorial of 0 is 1\")\n",
+        "else:\n",
+        "   print(\"The factorial of\", num, \"is\", recur_factorial(num))\n",
+        "     "
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "VmwIo-zmQUDl",
+        "outputId": "48d87f83-22f9-4b64-e885-77e525961e7b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the number = 66\n",
+            "The factorial of 66 is 544344939077443064003729240247842752644293064388798874532860126869671081148416000000000000000\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "19.\tPython Program to check a given number is even or odd."
+      ],
+      "metadata": {
+        "id": "mKqVgC3iQli7"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num = int(input ('Enter any number to test whether it is odd or even: '))\n",
+        "if (num % 2)==0:\n",
+        "    print ('The number is even')\n",
+        "else:\n",
+        "    print ('The provided number is odd')\n",
+        "     "
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4ARBsmObQzxx",
+        "outputId": "cafe9652-644c-4ba2-b37c-b4c256d2be05"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter any number to test whether it is odd or even: 6\n",
+            "The number is even\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "20.\tPython program to print first n Prime Number with explanation."
+      ],
+      "metadata": {
+        "id": "0DGvC-leQ_A5"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def isPrime(n):\n",
+        "  #since 0 and 1 is not prime return false.\n",
+        "  if(n==1 or n==0):\n",
+        "    return False\n",
+        "    \n",
+        "  #Run a loop from 2 to n-1\n",
+        "  for i in range(2,n):\n",
+        "    #if the number is divisible by i, then n is not a prime number.\n",
+        "    if(n%i==0):\n",
+        "      return False   \n",
+        "  #otherwise, n is prime number.\n",
+        "  return True\n",
+        "N =int(input('ENTER TILL HOW MANY NUMBERS YOU WANT TO KNOW ARE PRIME ='))\n",
+        "#check for every number from 1 to N\n",
+        "for i in range(1,N+1):\n",
+        "  #check if current number is prime\n",
+        "  if(isPrime(i)):\n",
+        "    print(i,end=\" \")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "bTs9zX71RGzW",
+        "outputId": "7077fe0d-1c8b-43c5-eba3-19d72bc58db1"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "ENTER TILL HOW MANY NUMBERS YOU WANT TO KNOW ARE PRIME =7777\n",
+            "2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97 101 103 107 109 113 127 131 137 139 149 151 157 163 167 173 179 181 191 193 197 199 211 223 227 229 233 239 241 251 257 263 269 271 277 281 283 293 307 311 313 317 331 337 347 349 353 359 367 373 379 383 389 397 401 409 419 421 431 433 439 443 449 457 461 463 467 479 487 491 499 503 509 521 523 541 547 557 563 569 571 577 587 593 599 601 607 613 617 619 631 641 643 647 653 659 661 673 677 683 691 701 709 719 727 733 739 743 751 757 761 769 773 787 797 809 811 821 823 827 829 839 853 857 859 863 877 881 883 887 907 911 919 929 937 941 947 953 967 971 977 983 991 997 1009 1013 1019 1021 1031 1033 1039 1049 1051 1061 1063 1069 1087 1091 1093 1097 1103 1109 1117 1123 1129 1151 1153 1163 1171 1181 1187 1193 1201 1213 1217 1223 1229 1231 1237 1249 1259 1277 1279 1283 1289 1291 1297 1301 1303 1307 1319 1321 1327 1361 1367 1373 1381 1399 1409 1423 1427 1429 1433 1439 1447 1451 1453 1459 1471 1481 1483 1487 1489 1493 1499 1511 1523 1531 1543 1549 1553 1559 1567 1571 1579 1583 1597 1601 1607 1609 1613 1619 1621 1627 1637 1657 1663 1667 1669 1693 1697 1699 1709 1721 1723 1733 1741 1747 1753 1759 1777 1783 1787 1789 1801 1811 1823 1831 1847 1861 1867 1871 1873 1877 1879 1889 1901 1907 1913 1931 1933 1949 1951 1973 1979 1987 1993 1997 1999 2003 2011 2017 2027 2029 2039 2053 2063 2069 2081 2083 2087 2089 2099 2111 2113 2129 2131 2137 2141 2143 2153 2161 2179 2203 2207 2213 2221 2237 2239 2243 2251 2267 2269 2273 2281 2287 2293 2297 2309 2311 2333 2339 2341 2347 2351 2357 2371 2377 2381 2383 2389 2393 2399 2411 2417 2423 2437 2441 2447 2459 2467 2473 2477 2503 2521 2531 2539 2543 2549 2551 2557 2579 2591 2593 2609 2617 2621 2633 2647 2657 2659 2663 2671 2677 2683 2687 2689 2693 2699 2707 2711 2713 2719 2729 2731 2741 2749 2753 2767 2777 2789 2791 2797 2801 2803 2819 2833 2837 2843 2851 2857 2861 2879 2887 2897 2903 2909 2917 2927 2939 2953 2957 2963 2969 2971 2999 3001 3011 3019 3023 3037 3041 3049 3061 3067 3079 3083 3089 3109 3119 3121 3137 3163 3167 3169 3181 3187 3191 3203 3209 3217 3221 3229 3251 3253 3257 3259 3271 3299 3301 3307 3313 3319 3323 3329 3331 3343 3347 3359 3361 3371 3373 3389 3391 3407 3413 3433 3449 3457 3461 3463 3467 3469 3491 3499 3511 3517 3527 3529 3533 3539 3541 3547 3557 3559 3571 3581 3583 3593 3607 3613 3617 3623 3631 3637 3643 3659 3671 3673 3677 3691 3697 3701 3709 3719 3727 3733 3739 3761 3767 3769 3779 3793 3797 3803 3821 3823 3833 3847 3851 3853 3863 3877 3881 3889 3907 3911 3917 3919 3923 3929 3931 3943 3947 3967 3989 4001 4003 4007 4013 4019 4021 4027 4049 4051 4057 4073 4079 4091 4093 4099 4111 4127 4129 4133 4139 4153 4157 4159 4177 4201 4211 4217 4219 4229 4231 4241 4243 4253 4259 4261 4271 4273 4283 4289 4297 4327 4337 4339 4349 4357 4363 4373 4391 4397 4409 4421 4423 4441 4447 4451 4457 4463 4481 4483 4493 4507 4513 4517 4519 4523 4547 4549 4561 4567 4583 4591 4597 4603 4621 4637 4639 4643 4649 4651 4657 4663 4673 4679 4691 4703 4721 4723 4729 4733 4751 4759 4783 4787 4789 4793 4799 4801 4813 4817 4831 4861 4871 4877 4889 4903 4909 4919 4931 4933 4937 4943 4951 4957 4967 4969 4973 4987 4993 4999 5003 5009 5011 5021 5023 5039 5051 5059 5077 5081 5087 5099 5101 5107 5113 5119 5147 5153 5167 5171 5179 5189 5197 5209 5227 5231 5233 5237 5261 5273 5279 5281 5297 5303 5309 5323 5333 5347 5351 5381 5387 5393 5399 5407 5413 5417 5419 5431 5437 5441 5443 5449 5471 5477 5479 5483 5501 5503 5507 5519 5521 5527 5531 5557 5563 5569 5573 5581 5591 5623 5639 5641 5647 5651 5653 5657 5659 5669 5683 5689 5693 5701 5711 5717 5737 5741 5743 5749 5779 5783 5791 5801 5807 5813 5821 5827 5839 5843 5849 5851 5857 5861 5867 5869 5879 5881 5897 5903 5923 5927 5939 5953 5981 5987 6007 6011 6029 6037 6043 6047 6053 6067 6073 6079 6089 6091 6101 6113 6121 6131 6133 6143 6151 6163 6173 6197 6199 6203 6211 6217 6221 6229 6247 6257 6263 6269 6271 6277 6287 6299 6301 6311 6317 6323 6329 6337 6343 6353 6359 6361 6367 6373 6379 6389 6397 6421 6427 6449 6451 6469 6473 6481 6491 6521 6529 6547 6551 6553 6563 6569 6571 6577 6581 6599 6607 6619 6637 6653 6659 6661 6673 6679 6689 6691 6701 6703 6709 6719 6733 6737 6761 6763 6779 6781 6791 6793 6803 6823 6827 6829 6833 6841 6857 6863 6869 6871 6883 6899 6907 6911 6917 6947 6949 6959 6961 6967 6971 6977 6983 6991 6997 7001 7013 7019 7027 7039 7043 7057 7069 7079 7103 7109 7121 7127 7129 7151 7159 7177 7187 7193 7207 7211 7213 7219 7229 7237 7243 7247 7253 7283 7297 7307 7309 7321 7331 7333 7349 7351 7369 7393 7411 7417 7433 7451 7457 7459 7477 7481 7487 7489 7499 7507 7517 7523 7529 7537 7541 7547 7549 7559 7561 7573 7577 7583 7589 7591 7603 7607 7621 7639 7643 7649 7669 7673 7681 7687 7691 7699 7703 7717 7723 7727 7741 7753 7757 7759 "
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "21.\tPython Program to print Prime Number in a given range"
+      ],
+      "metadata": {
+        "id": "qOyIddmXF2_N"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lower_value = int(input (\"Please, Enter the Lowest Range Value: \"))  \n",
+        "upper_value = int(input (\"Please, Enter the Upper Range Value: \"))  \n",
+        "  \n",
+        "print (\"The Prime Numbers in the range are: \")  \n",
+        "for number in range (lower_value, upper_value + 1):  \n",
+        "    if number > 1:  \n",
+        "        for i in range (2, number):  \n",
+        "            if (number % i) == 0:  \n",
+        "                break  \n",
+        "        else:  \n",
+        "            print (number)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CINIVjIlGm_6",
+        "outputId": "c820a589-4c47-4424-a452-44703c08114e"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Please, Enter the Lowest Range Value: 1\n",
+            "Please, Enter the Upper Range Value: 3\n",
+            "The Prime Numbers in the range are: \n",
+            "2\n",
+            "3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "22.\tPython Program to find Smallest number among three."
+      ],
+      "metadata": {
+        "id": "MKAjHofyHUwR"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = int(input('Enter first number  : '))\n",
+        "b = int(input('Enter second number : '))\n",
+        "c = int(input('Enter third number  : '))\n",
+        "\n",
+        "smallest= 0\n",
+        "\n",
+        "if (a < b and a < c) :\n",
+        "    smallest = a\n",
+        "elif (b < c) :\n",
+        "    smallest = b\n",
+        "else :\n",
+        "    smallest = c\n",
+        "\n",
+        "print(smallest, \"is the smallest of three numbers.\")\n",
+        "     "
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "JUUDv-biHcnJ",
+        "outputId": "08ebf094-f81c-4edc-a497-23e6373f15f2"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter first number  : 7\n",
+            "Enter second number : 8\n",
+            "Enter third number  : 9\n",
+            "7 is the smallest of three numbers.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "23.\tPython program to calculate the power using the POW method"
+      ],
+      "metadata": {
+        "id": "LHRP0q-AHqeg"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "base =int(input('enter the base number = '))\n",
+        "exponent =int(input('enter te exponent = '))\n",
+        "\n",
+        "result = pow(base, exponent)\n",
+        "\n",
+        "print(\"Answer = \" + str(result))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xNLepEKQH8rL",
+        "outputId": "e58afd8c-2672-48fb-ddf6-6dae8ef56d98"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the base number = 77\n",
+            "enter te exponent = 8\n",
+            "Answer = 1235736291547681\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "24.\tPython Program to calculate the power without using POW function.(using for loop)."
+      ],
+      "metadata": {
+        "id": "pJsv45t9IMj3"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "base =int(input('enter the base number = '))\n",
+        "exponent =int(input('enter the exponent = '))\n",
+        "\n",
+        "result = 1\n",
+        "\n",
+        "for exponent in range(exponent, 0, -1):\n",
+        "    result *= base\n",
+        "\n",
+        "print(\"Answer = \" + str(result))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Mu7H0Q83Iaty",
+        "outputId": "57ef5885-b7a5-4a68-f2cd-3e362aafb74d"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the base number = 8\n",
+            "enter the exponent = 9\n",
+            "Answer = 134217728\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "25.\tPython Program to calculate the power without using POW function.(using while loop)."
+      ],
+      "metadata": {
+        "id": "h5lFB-NtInlw"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "base =int(input('enter the base number = '))\n",
+        "exponent =int(input('enter the exponent = '))\n",
+        "\n",
+        "result = 1\n",
+        "\n",
+        "while exponent != 0:\n",
+        "    result *= base\n",
+        "    exponent-=1\n",
+        "\n",
+        "print(\"Answer = \" + str(result))\n",
+        "     "
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0KcAlRjUIukZ",
+        "outputId": "c3175600-022c-4b51-ad06-5bd161d4ea72"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the base number = 8\n",
+            "enter the exponent = 9\n",
+            "Answer = 134217728\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "26.\tPython Program to calculate the square of a given number."
+      ],
+      "metadata": {
+        "id": "8nckD_L2I6I8"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n=int(input('enter the number = '))\n",
+        "if(n==0):\n",
+        "  print('enter a valid number')\n",
+        "else: \n",
+        " sq=n*n\n",
+        " print(sq,'is the square of ',n)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "O5QU9JDOJB8s",
+        "outputId": "dcf3de7e-878a-404e-e3ec-b53b62e076ae"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the number = 9\n",
+            "81 is the square of  9\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "27.\tPython Program to calculate the cube of a given number."
+      ],
+      "metadata": {
+        "id": "in7jCkO_JSIc"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n=int(input('enter the number = '))\n",
+        "if(n==0):\n",
+        "  print('enter a valid number')\n",
+        "else: \n",
+        " cr=n*n*n\n",
+        " print(cr,'is the cube of ',n)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TxPWohkpJcaa",
+        "outputId": "33aa9afb-99ba-416a-a077-973d0f0be24b"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the number = 9\n",
+            "729 is the cube of  9\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "28.\tPython Program to calculate the square root of a given number."
+      ],
+      "metadata": {
+        "id": "o9pcADjFJs8Q"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "n=int(input('enter the number = '))\n",
+        "if(n==0):\n",
+        "  print('enter a valid number')\n",
+        "else: \n",
+        " sr=int(n**0.5)\n",
+        " print(sr,'is the square root of ',n)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "U9rm3SKzJ1b9",
+        "outputId": "67bd640b-6de6-4bb7-ae71-a75624daf8d4"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the number = 99\n",
+            "9 is the square root of  99\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "29.\tPython program to calculate LCM of given two numbers."
+      ],
+      "metadata": {
+        "id": "CMzPydReKDgH"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num1 = int(input('enter the first number = '))\n",
+        "num2 = int(input('enter the second number = '))\n",
+        "if(num1 > num2 ):\n",
+        "    max= num1\n",
+        "else:\n",
+        "    max= num2\n",
+        "while(True):\n",
+        "    if(max % num1 == 0 and max % num2 == 0):   \n",
+        "        print(max)\n",
+        "        break;\n",
+        "    max= max+ 1\n",
+        "     "
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "YSQ_-tdAKLDp",
+        "outputId": "1f5e8d79-05bf-4ba4-fd6a-646c261e5bab"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the first number = 7\n",
+            "enter the second number = 9\n",
+            "63\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "30.\tPython Program to find GCD or HCF of two numbers."
+      ],
+      "metadata": {
+        "id": "iwaAU6mTKeij"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def compute_hcf(x, y):\n",
+        "    if x > y:\n",
+        "        smaller = y\n",
+        "    else:\n",
+        "        smaller = x\n",
+        "    for i in range(1, smaller+1):\n",
+        "        if((x % i == 0) and (y % i == 0)):\n",
+        "            hcf = i \n",
+        "    return hcf\n",
+        "\n",
+        "num1 =int(input('enter the first number = '))\n",
+        "num2 =int(input('enter the second number = '))\n",
+        "\n",
+        "print(\"The H.C.F. is\", compute_hcf(num1, num2))\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0ix1xwnfKmTU",
+        "outputId": "79d1a0fe-f7e7-4215-90bc-777eac8645bc"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the first number = 8\n",
+            "enter the second number = 9\n",
+            "The H.C.F. is 1\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "31.\tPython Program to find GCD of two numbers using recursion"
+      ],
+      "metadata": {
+        "id": "y85B0qJBK2Oz"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def gcd(a,b):\n",
+        "    if(b==0):\n",
+        "        return a\n",
+        "    else:\n",
+        "        return gcd(b,a%b)\n",
+        "a=int(input(\"Enter first number:\"))\n",
+        "b=int(input(\"Enter second number:\"))\n",
+        "GCD=gcd(a,b)\n",
+        "print(\"GCD is: \")\n",
+        "print(GCD)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LzKm9tvtK9BS",
+        "outputId": "d2a80345-b5dc-48b8-bd73-facf4bc2fc09"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter first number:11\n",
+            "Enter second number:89\n",
+            "GCD is: \n",
+            "1\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "32.\tPython Program to Convert Decimal Number into Binary"
+      ],
+      "metadata": {
+        "id": "pELEY9BzLQWX"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def convertToBinary(n):\n",
+        "   if n > 1:\n",
+        "       convertToBinary(n//2)\n",
+        "   print(n % 2,end = '')\n",
+        "\n",
+        "dec =int(input('enter the number in decimal : '))\n",
+        "\n",
+        "convertToBinary(dec)\n",
+        "print('  in binary')\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "AkhGau3DLbKk",
+        "outputId": "b91ec3c6-9084-46c4-f5c2-0bd607454303"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the number in decimal : 00\n",
+            "0  in binary\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "33.\tPython Program to convert Decimal number to Octal number"
+      ],
+      "metadata": {
+        "id": "nkTzQ8EDLqNR"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def convertTooctal(n):\n",
+        "   if n > 1:\n",
+        "       convertTooctal(n//8)\n",
+        "   print(n % 8,end = '')\n",
+        "\n",
+        "dec =int(input('enter the number in decimal : '))\n",
+        "\n",
+        "convertTooctal(dec)\n",
+        "print('  in octal')\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Wy-v9_HQL3cu",
+        "outputId": "143c5eee-3f07-40e0-819f-914f99d2d37b"
+      },
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the number in decimal : 7\n",
+            "07  in octal\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "34.\tPython Program to check the given year is a leap year or not."
+      ],
+      "metadata": {
+        "id": "WkucA0PNMDCD"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "year =int(input('enter the year want to be checked = '))\n",
+        "if (year % 400 == 0) and (year % 100 == 0):\n",
+        "    print(\"{0} is a leap year\".format(year))\n",
+        "\n",
+        "elif (year % 4 ==0) and (year % 100 != 0):\n",
+        "    print(\"{0} is a leap year\".format(year))\n",
+        "\n",
+        "else:\n",
+        "    print(\"{0} is not a leap year\".format(year))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "rRGuzz2GMLGI",
+        "outputId": "a7d60b86-d5c0-4c61-d400-5509e41573fb"
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the year want to be checked = 2002\n",
+            "2002 is not a leap year\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "35.\tPython Program to convert Celsius to Fahrenheit."
+      ],
+      "metadata": {
+        "id": "U0P3cxuJMXoP"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "celsius = float(input(\"Enter temperature in celsius: \"))\n",
+        "fahrenheit = (celsius * 1.8) + 32\n",
+        "print(str(celsius )+ \" degree Celsius is equal to \" + str(fahrenheit )+ \" degree Fahrenheit.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "S0GROfvGMkj2",
+        "outputId": "02d6b7a7-ff34-405d-e2b3-ac1050099130"
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter temperature in celsius: 35\n",
+            "35.0 degree Celsius is equal to 95.0 degree Fahrenheit.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "36.\tPython Program to convert Fahrenheit to Celsius."
+      ],
+      "metadata": {
+        "id": "kRaGQEkEMzGg"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "fahrenheit = float(input(\"Enter temperature in fahrenheit: \"))\n",
+        "celsius = (fahrenheit - 32)/1.8\n",
+        "print(str(fahrenheit )+ \" degree Fahrenheit is equal to \" + str(celsius ) + \" degree Celsius.\" )\n",
+        "     "
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2uqWvCojM5Xx",
+        "outputId": "2b4c4606-a21f-4ea4-a559-2f6518684087"
+      },
+      "execution_count": 16,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter temperature in fahrenheit: 37\n",
+            "37.0 degree Fahrenheit is equal to 2.7777777777777777 degree Celsius.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "37.\tPython program to calculate Simple Interest with explanation"
+      ],
+      "metadata": {
+        "id": "RzOAUUCjNHLa"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "Amount = int(input(\"Enter the amount: \"))\n",
+        "# Enter the number of years\n",
+        "Year = int(input(\"Enter the number of years: \"))\n",
+        "# Enter the rate of interest\n",
+        "Rate = float(input(\"Enter the rate of interest: \"))\n",
+        "if(year<1): #as here intrest is calculated annually\n",
+        "   print('no intrest for you')\n",
+        "else:\n",
+        "  SimpleInterset = (Amount*Year*Rate)/100  #using the simple intrest formula\n",
+        "\n",
+        "print(\"The simple interset is:\", SimpleInterset)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "iz_J9aaCNMrz",
+        "outputId": "be075a44-7711-4e3b-ca22-9315ea859934"
+      },
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter the amount: 500\n",
+            "Enter the number of years: 2003\n",
+            "Enter the rate of interest: 44\n",
+            "The simple interset is: 440660.0\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
